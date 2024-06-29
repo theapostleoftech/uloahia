@@ -1,0 +1,317 @@
+{% extends 'layouts/_base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+{% block content %}
+	<!-- Hero Section -->
+	<section
+			class="pt-8 pb-8 bg-gradient-to-tl from-green-600 bg-gradient-to-br from-green-900 bg-primary-600 dark:bg-gray-900">
+		<div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+			<a href="{% url 'core:join_waitlist' %}" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700
+			   bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+			   role="alert">
+				<span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span
+					class="text-sm font-medium">Save Money Together</span>
+				<svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd"
+					      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+					      clip-rule="evenodd"></path>
+				</svg>
+			</a>
+			<h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-100 md:text-5xl lg:text-6xl
+			dark:text-white">Buy More, <br>Pay Less, Save More</h1>
+			<p class="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+				Easily purchase groceries in bulk with other individuals at wholesale prices, enjoy lower costs, and
+				enjoy increased food availability.</p>
+			<div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+				<a href="{% url 'core:join_waitlist' %}"
+				   class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center
+				   text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300
+				   dark:focus:ring-primary-900">Join the Waitlist
+					<svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+					     xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd"
+						      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586
+						      11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- End Hero Section -->
+
+
+	<!-- Food Types Section -->
+	<section class="pt-16 pb-16 bg-white dark:bg-gray-900">
+		<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+			<div class="mb-6">
+				<div class="items-center bg-gray-100 border border-primary-600 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+					<a href="#">
+						<img class="w-full rounded-lg sm:rounded-none md:rounded-l-lg"
+						     src="{% static 'src/public/image/basket.png' %}" alt="Food Basket">
+					</a>
+					<div class="p-5">
+						<h2 class="text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+							From rice to beans,yam to potatoes, carrots to cabbages, etc...
+						</h2>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- End Food Section -->
+
+	<!-- Community Section -->
+	<section
+			class="pt-16 pb-16 bg-gradient-to-tl from-green-600 bg-gradient-to-br from-green-900 bg-primary-600 dark:bg-gray-900">
+		<div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+			<div class="mr-auto place-self-center lg:col-span-7">
+				<h1 class="max-w-2xl mb-4 text-5xl text-white font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+					Unlock wholesale prices with <br>community power!</h1>
+				<p class="max-w-2xl mb-6 font-light text-gray-100 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+					Connect with other individuals who need groceries, access wholesale prices from
+					farmers and food suppliers, pool resources together and make purchases.
+				</p>
+				<a href="{% url 'core:join_waitlist' %}"
+				   class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+					Join the Waitlist
+					<svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+					     xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd"
+						      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+						      clip-rule="evenodd"></path>
+					</svg>
+				</a>
+
+			</div>
+			<div class="lg:mt-0 sm:mt-4 lg:col-span-5 lg:flex">
+				<img class="mt-4 border border-primary rounded-b-full rounded-e-full"
+				     src="{% static 'src/public/image/community.jpg' %}" alt="Community">
+			</div>
+		</div>
+	</section>
+	<!-- End Community Section -->
+
+
+	<!-- Get it Section -->
+	<section class="pt-16 pb-16 bg-white dark:bg-gray-900">
+
+		<div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+			<div class="mr-auto place-self-center lg:col-span-7">
+				<h1 class="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+					You Want it? <br>We Get it!</h1>
+				<p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+					Whether you are running out of stock or need to restock, get clean and fresh organic food when you
+					want it and where you want it.
+
+				</p>
+				<a href="{% url 'core:join_waitlist' %}"
+				   class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+					Join the Waitlist
+					<svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+					     xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd"
+						      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+						      clip-rule="evenodd"></path>
+					</svg>
+				</a>
+
+			</div>
+			<div class="lg:mt-0 sm:mt-4 lg:col-span-5 lg:flex">
+				<img class="object-cover w-full mt-4"
+				     src="{% static 'src/public/image/delivery.png' %}" alt="Delivery">
+			</div>
+		</div>
+	</section>
+	<!-- End Get it Section -->
+
+
+	<!--Farmers Source -->
+	<section class="pt-16 pb-16 bg-gradient-to-tl from-green-600 bg-gradient-to-br from-green-900 bg-orange-700 
+	dark:bg-gray-900">
+		<div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+
+			<h2 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-100 md:text-5xl lg:text-6xl dark:text-white">
+				From the Best <br>of Farmers and Suppliers</h2>
+			<p class="mb-8 text-lg font-normal text-gray-50 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+				Premium-quality produce from vetted farmers and suppliers across Nigeria. We ensure freshness,
+				nutritional value, and ethical sourcing
+			</p>
+			<div class="mt-8">
+				<img class="object-cover w-full rounded-lg"
+				     src="{% static "src/public/image/farm_source.jpg" %}"
+				     alt="office content 1">
+			</div>
+		</div>
+	</section>
+	<!-- End Farmers Source -->
+
+
+	<!-- Delivery  Section -->
+	<section class="pt-16 pb-16 bg-white dark:bg-gray-900">
+		<div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+			<div class="mr-auto place-self-center lg:col-span-7">
+				<h1 class="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+					Groceries and more...</h1>
+				<p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+					Available for purchase, pickup and delivery to your doorstep...
+				</p>
+				<a href="{% url 'core:join_waitlist' %}"
+				   class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+					Join the Waitlist
+					<svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+					     xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd"
+						      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+						      clip-rule="evenodd"></path>
+					</svg>
+				</a>
+
+			</div>
+			<div class="lg:mt-0 sm:mt-4 lg:col-span-5 lg:flex">
+				<img class="border border-primary-500 rounded-e-full rounded-b-full object-cover w-full mt-4"
+				     src="{% static 'src/public/image/delivery.jpg' %}" alt="Delivery">
+			</div>
+		</div>
+	</section>
+	<!-- End Get it Section -->
+	
+	<section class="pt-16 pb-16 bg-white dark:bg-gray-900">
+		<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+			<div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
+				<figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
+					<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+						<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Very easy this was to
+						                                                                integrate</h3>
+						<p class="my-4">If you care for your time, I hands down would go with this."</p>
+					</blockquote>
+					<figcaption class="flex items-center justify-center ">
+						<img class="rounded-full w-9 h-9"
+						     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
+						     alt="profile picture">
+						<div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+							<div>Bonnie Green</div>
+							<div class="text-sm text-gray-500 dark:text-gray-400 ">Developer at Open AI</div>
+						</div>
+					</figcaption>
+				</figure>
+				<figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+					<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+						<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any
+						                                                                project</h3>
+						<p class="my-4">Designing with Figma components that can be easily translated to the utility
+						                classes of
+						                Tailwind CSS is a huge timesaver!"</p>
+					</blockquote>
+					<figcaption class="flex items-center justify-center ">
+						<img class="rounded-full w-9 h-9"
+						     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
+						     alt="profile picture">
+						<div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+							<div>Roberta Casas</div>
+							<div class="text-sm text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
+						</div>
+					</figcaption>
+				</figure>
+				<figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
+					<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+						<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow</h3>
+						<p class="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly
+						                level up
+						                your next application."</p>
+					</blockquote>
+					<figcaption class="flex items-center justify-center ">
+						<img class="rounded-full w-9 h-9"
+						     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
+						     alt="profile picture">
+						<div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+							<div>Jese Leos</div>
+							<div class="text-sm text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
+						</div>
+					</figcaption>
+				</figure>
+				<figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+					<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+						<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
+						<p class="my-4">You have many examples that can be used to create a fast prototype for your
+						                team."</p>
+					</blockquote>
+					<figcaption class="flex items-center justify-center ">
+						<img class="rounded-full w-9 h-9"
+						     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
+						     alt="profile picture">
+						<div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+							<div>Joseph McFall</div>
+							<div class="text-sm text-gray-500 dark:text-gray-400">CTO at Google</div>
+						</div>
+					</figcaption>
+				</figure>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="pt-16 pb-16 bg-white dark:bg-gray-900">
+		<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+			<div class="mx-auto max-w-screen-md sm:text-center">
+				<h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">Sign
+				                                                                                                  up for
+				                                                                                                  our
+				                                                                                                  newsletter</h2>
+				<p class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">Stay
+				                                                                                                  up to
+				                                                                                                  date
+				                                                                                                  with
+				                                                                                                  the
+				                                                                                                  roadmap
+				                                                                                                  progress,
+				                                                                                                  announcements
+				                                                                                                  and
+				                                                                                                  exclusive
+				                                                                                                  discounts
+				                                                                                                  feel
+				                                                                                                  free
+				                                                                                                  to
+				                                                                                                  sign
+				                                                                                                  up
+				                                                                                                  with
+				                                                                                                  your
+				                                                                                                  email.</p>
+				<form action="#">
+					<div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+						<div class="relative w-full">
+							<label for="email" class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email
+							                                                                                            address</label>
+							<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+								<svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+								     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+									<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+								</svg>
+							</div>
+							<input class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+							       placeholder="Enter your email" type="email" id="email" required="">
+						</div>
+						<div>
+							<button type="submit"
+							        class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+								Subscribe
+							</button>
+						</div>
+					</div>
+					<div class="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">
+						We care about the protection of your data. <a href="#"
+						                                              class="font-medium text-primary-600 dark:text-primary-500 hover:underline">Read
+						                                                                                                                         our
+						                                                                                                                         Privacy
+						                                                                                                                         Policy</a>.
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+{% endblock content %}
