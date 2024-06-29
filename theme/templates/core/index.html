@@ -1,13 +1,12 @@
-{% extends 'layouts/_base.html' %}
-{#{% extends 'theme/templates/base.html' %}#}
+{% extends 'theme/templates/base.html' %}
 {% load static %}
 
 {% block title %}Home{% endblock title %}
 {% block content %}
 	<!-- Hero Section -->
 	<section
-			class="w-full pt-8 pb-8 bg-gradient-to-tl from-green-900 bg-primary-600 dark:bg-gray-900">
-		<div class="max-w-screen-xl mx-auto py-8 px-4 text-center lg:py-16 lg:px-12">
+			class="pt-8 pb-8 bg-gradient-to-tl from-green-600 bg-gradient-to-br from-green-900 bg-primary-600 dark:bg-gray-900">
+		<div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
 			<a href="{% url 'core:join_waitlist' %}" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700
 			   bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
 			   role="alert">
@@ -49,7 +48,7 @@
 				<div class="items-center bg-gray-100 border border-primary-600 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
 					<a href="#">
 						<img class="w-full rounded-lg sm:rounded-none md:rounded-l-lg"
-						     src="{% static 'static_src/src/public/image/basket.png' %}" alt="Food Basket">
+						     src="{% static 'src/public/image/basket.png' %}" alt="Food Basket">
 					</a>
 					<div class="p-5">
 						<h2 class="text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
@@ -89,7 +88,7 @@
 			</div>
 			<div class="lg:mt-0 sm:mt-4 lg:col-span-5 lg:flex">
 				<img class="mt-4 border border-primary rounded-b-full rounded-e-full"
-				     src="{% static 'static_src/src/public/image/community.jpg' %}" alt="Community">
+				     src="{% static 'src/public/image/community.jpg' %}" alt="Community">
 			</div>
 		</div>
 	</section>
@@ -122,7 +121,7 @@
 			</div>
 			<div class="lg:mt-0 sm:mt-4 lg:col-span-5 lg:flex">
 				<img class="object-cover w-full mt-4"
-				     src="{% static 'static_src/src/public/image/delivery.png' %}" alt="Delivery">
+				     src="{% static 'src/public/image/delivery.png' %}" alt="Delivery">
 			</div>
 		</div>
 	</section>
@@ -142,7 +141,7 @@
 			</p>
 			<div class="mt-8">
 				<img class="object-cover w-full rounded-lg"
-				     src="{% static "static_src/src/public/image/farm_source.jpg" %}"
+				     src="{% static "src/public/image/farm_source.jpg" %}"
 				     alt="office content 1">
 			</div>
 		</div>
@@ -173,12 +172,12 @@
 			</div>
 			<div class="lg:mt-0 sm:mt-4 lg:col-span-5 lg:flex">
 				<img class="border border-primary-500 rounded-e-full rounded-b-full object-cover w-full mt-4"
-				     src="{% static 'static_src/src/public/image/delivery.jpg' %}" alt="Delivery">
+				     src="{% static 'src/public/image/delivery.jpg' %}" alt="Delivery">
 			</div>
 		</div>
 	</section>
 	<!-- End Get it Section -->
-
+	
 	<section class="pt-16 pb-16 bg-white dark:bg-gray-900">
 		<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
 			<div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">

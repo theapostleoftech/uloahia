@@ -28,6 +28,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+INTERNAL_IPS = [
+    "127.0.0.1",
+    "localhost",
+]
+
 AUTH_USER_MODEL = 'accounts.UserAccount'
 # Application definition
 
@@ -37,21 +42,26 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'theme.apps.ThemeConfig',
     'django.contrib.staticfiles',
-    'compressor',
+    # 'compressor',
     'core.apps.CoreConfig',
     'accounts.apps.AccountsConfig',
     'phonenumber_field',
+    'tailwind',
+    'django_browser_reload',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'uloahia.urls'
@@ -59,7 +69,10 @@ ROOT_URLCONF = 'uloahia.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [
+            BASE_DIR / 'templates',
+            BASE_DIR / 'theme' / 'templates',
+        ]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -138,15 +151,19 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'theme/static'
 
-COMPRESS_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "theme")]
 
-COMPRESS_ENABLED = True
+# COMPRESS_ROOT = BASE_DIR / 'static'
 
-STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
+# COMPRESS_ENABLED = True
+
+# STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TAILWIND_APP_NAME = 'theme'

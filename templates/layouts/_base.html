@@ -1,4 +1,4 @@
-{% load compress %}
+{% load static tailwind_tags %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -9,20 +9,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %}{% endblock title %} - ULOAHIA</title>
-
-	{% compress css %}
-		<link rel="stylesheet" href="{% static 'src/output.css' %}">
-	{% endcompress %}
-
+	{% tailwind_css %}
+	{% tailwind_preload_css %}
 </head>
-
-
-<body class="bg-primary">
+<body class="bg-primary min-h-screen flex flex-col">
 <header class="m-4">
-	<nav class="px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-		<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+	<nav class="container mx-auto px-4 py-3 lg:px-6 py-2.5 dark:bg-gray-800">
+		<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
 			<a href="{% url 'core:home' %}" class="flex items-center">
-				<img src="{% static 'src/public/image/logo.png' %}" class="mr-3 h-6 sm:h-9" alt="ULOAHIA"/>
+				<img src="{% static 'static_src/src/public/image/logo.png' %}" class="mr-3 h-6 sm:h-9" alt="ULOAHIA"/>
 				<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">ULOAHIA</span>
 			</a>
 			<div class="flex items-center lg:order-2">
@@ -84,11 +79,13 @@
 		</div>
 	</nav>
 </header>
-<div class="container mx-auto">
+<main class="flex-grow container mx-auto px-4 py-8">
+
 	{% block content %}
 	{% endblock content %}
 	{% include 'layouts/snippets/footer.html' %}
-</div>
+	
+</main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
