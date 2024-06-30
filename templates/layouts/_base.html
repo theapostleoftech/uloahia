@@ -14,7 +14,7 @@
 	{% tailwind_css %}
 
 </head>
-<body class="bg-primary min-h-screen flex flex-col">
+<body class="bg-primary min-h-screen">
 <header class="m-4">
 	<nav class="container mx-auto px-4 py-3 lg:px-6dark:bg-gray-800">
 		<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
@@ -81,7 +81,7 @@
 		</div>
 	</nav>
 </header>
-<main class="flex-grow container mx-auto px-4 py-8">
+<main class="block relative">
 
 	{% block content %}
 	{% endblock content %}
