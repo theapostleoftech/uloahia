@@ -5,6 +5,7 @@ import os
 from urllib.parse import urlparse
 
 import environ
+import dj_database_url
 
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
@@ -95,15 +96,7 @@ DATABASE_URL = env('DATABASE_URL', default=None)
 if DATABASE_URL:
     db_info = urlparse(DATABASE_URL)
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': db_info.path[1:],
-            'USER': db_info.username,
-            'PASSWORD': db_info.password,
-            'HOST': db_info.hostname,
-            'PORT': db_info.port,
-            'OPTIONS': {'sslmode': 'require'}
-        }
+        'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
