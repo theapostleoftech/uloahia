@@ -1,1 +1,1 @@
-web: gunicorn uloahia.wsgi --log-file . --workers 2
+web: gunicorn uloahia.wsgi --log-file .

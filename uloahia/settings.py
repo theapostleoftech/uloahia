@@ -25,7 +25,7 @@ DEVELOPMENT_MODE = env.bool('DEVELOPMENT_MODE', default=False)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = env.bool('DJANGO_DEBUG', default=True)
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
