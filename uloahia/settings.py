@@ -25,14 +25,14 @@ DEVELOPMENT_MODE = env.bool('DEVELOPMENT_MODE', default=False)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = env.bool('DJANGO_DEBUG', default=True)
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'uloahia.africa', ]
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-    "localhost",
-]
+# INTERNAL_IPS = [
+#     "127.0.0.1",
+#     "localhost",
+# ]
 
 AUTH_USER_MODEL = 'accounts.UserAccount'
 # Application definition
@@ -92,7 +92,10 @@ WSGI_APPLICATION = 'uloahia.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+DATABASES = {
+    'default': dj_database_url.config
+    (default=os.environ.get('DATABASE_URL'))
+}
 # DATABASE_URL = env('DATABASE_URL', default=None)
 # if DATABASE_URL:
 #     db_info = urlparse(DATABASE_URL)

@@ -1,1 +1,1 @@
-web: gunicorn uloahia.wsgi --log-file .
+web: gunicorn uloahia.wsgi --access-logfile -
