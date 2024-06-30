@@ -24,10 +24,10 @@ SECRET_KEY = env('DJANGO_SECRET_KEY', default=get_random_secret_key())
 DEVELOPMENT_MODE = env.bool('DEVELOPMENT_MODE', default=False)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = env.bool('DJANGO_DEBUG', default=True)
-DEBUG = True
+DEBUG = env.bool('DJANGO_DEBUG',)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'uloahia.africa', ]
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'uloahia.africa', 'uloahia-5be9cf42e018.herokuapp.com/']
 
 # INTERNAL_IPS = [
 #     "127.0.0.1",
