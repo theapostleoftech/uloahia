@@ -27,7 +27,7 @@ DEVELOPMENT_MODE = env.bool('DEVELOPMENT_MODE', default=False)
 DEBUG = env.bool('DJANGO_DEBUG',)
 
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'uloahia.africa', 'uloahia-5be9cf42e018.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'uloahia.africa', 'uloahia-5be9cf42e018.herokuapp.com']
 
 # INTERNAL_IPS = [
 #     "127.0.0.1",
