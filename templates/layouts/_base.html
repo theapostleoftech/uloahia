@@ -5,16 +5,18 @@
 <html lang="en">
 
 <head>
+	<title>{% block title %}{% endblock title %} - ULOAHIA</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{% block title %}{% endblock title %} - ULOAHIA</title>
-	{% tailwind_css %}
+
 	{% tailwind_preload_css %}
+	{% tailwind_css %}
+
 </head>
 <body class="bg-primary min-h-screen flex flex-col">
 <header class="m-4">
-	<nav class="container mx-auto px-4 py-3 lg:px-6 py-2.5 dark:bg-gray-800">
+	<nav class="container mx-auto px-4 py-3 lg:px-6dark:bg-gray-800">
 		<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
 			<a href="{% url 'core:home' %}" class="flex items-center">
 				<img src="{% static 'static_src/src/public/image/logo.png' %}" class="mr-3 h-6 sm:h-9" alt="ULOAHIA"/>
@@ -84,7 +86,7 @@
 	{% block content %}
 	{% endblock content %}
 	{% include 'layouts/snippets/footer.html' %}
-	
+
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>

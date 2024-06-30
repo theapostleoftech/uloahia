@@ -1,0 +1,1 @@
+web: gunicorn 'uloahia.wsgi.application'
