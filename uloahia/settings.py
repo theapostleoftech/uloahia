@@ -92,23 +92,24 @@ WSGI_APPLICATION = 'uloahia.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASE_URL = env('DATABASE_URL', default=None)
-if DATABASE_URL:
-    db_info = urlparse(DATABASE_URL)
-    DATABASES = {
-        'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': env('DATABASE_NAME'),
-            'USER': env('DATABASE_USER'),
-            'PASSWORD': env('DATABASE_PASSWORD'),
-            'HOST': env('DATABASE_HOST', default='localhost'),
-            'PORT': env('DATABASE_PORT', default='5432'),
-        }
-    }
+DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+# DATABASE_URL = env('DATABASE_URL', default=None)
+# if DATABASE_URL:
+#     db_info = urlparse(DATABASE_URL)
+#     DATABASES = {
+#         'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': env('DATABASE_NAME'),
+#             'USER': env('DATABASE_USER'),
+#             'PASSWORD': env('DATABASE_PASSWORD'),
+#             'HOST': env('DATABASE_HOST', default='localhost'),
+#             'PORT': env('DATABASE_PORT', default='5432'),
+#         }
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
